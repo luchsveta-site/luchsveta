@@ -475,7 +475,7 @@ img { max-width: 100%; display: block; }
 .mc__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
+  gap: 30px;
   margin-top: 40px;
 }
 .mc__card {
@@ -484,10 +484,13 @@ img { max-width: 100%; display: block; }
   background-size: cover;
   background-position: center;
   border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 30px;
+  border-radius: 20px;
+  padding: 40px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
 }
 .mc__card::before {
@@ -515,12 +518,12 @@ img { max-width: 100%; display: block; }
 .mc__card h3 {
   font-family: var(--font-head);
   font-weight: 800;
-  font-size: 20px;
-  margin-bottom: 12px;
+  font-size: 24px;
+  margin-bottom: 14px;
   color: var(--text);
 }
-.mc__card p { color: var(--text-muted); font-size: 14px; margin-bottom: 18px; }
-.mc__link { color: var(--gold-light); font-weight: 700; font-size: 14px; }
+.mc__card p { color: var(--text-muted); font-size: 14.5px; margin-bottom: 18px; flex-grow: 1; }
+.mc__link { color: var(--gold-light); font-weight: 700; font-size: 14.5px; }
 .mc__link:hover { color: var(--gold); }
 
 /* ===== FREE MATERIALS ===== */
