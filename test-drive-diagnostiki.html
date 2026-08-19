@@ -202,7 +202,9 @@
         <li><span class="star">★</span> Личный бонус при переходе на флагманскую программу</li>
       </ul>
     </div>
-    <form class="signup__form reveal" id="signupForm">
+    <form class="signup__form reveal" id="signupForm" name="test-drive-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="test-drive-signup">
+      <p class="hp-field"><label>Не заполняйте это поле: <input name="bot-field"></label></p>
       <label for="signupName">Ваше имя</label>
       <input type="text" id="signupName" name="name" placeholder="Как вас зовут?" required>
       <label for="signupContact">Телефон, Telegram или e-mail</label>

@@ -76,15 +76,26 @@ if (countdownEl) {
   const countdownTimer = setInterval(updateCountdown, 1000);
 }
 
-// Заглушка отправки формы заявки
+// Отправка формы заявки в Netlify Forms
 const signupForm = document.getElementById('signupForm');
 if (signupForm) {
   signupForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const btn = signupForm.querySelector('button');
     const originalText = btn.textContent;
-    btn.textContent = 'Заявка отправлена!';
-    signupForm.reset();
-    setTimeout(() => { btn.textContent = originalText; }, 2500);
+    const data = new URLSearchParams(new FormData(signupForm)).toString();
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: data
+    })
+      .then(() => {
+        btn.textContent = 'Заявка отправлена!';
+        signupForm.reset();
+        setTimeout(() => { btn.textContent = originalText; }, 2500);
+      })
+      .catch(() => {
+        alert('Не удалось отправить форму. Попробуйте ещё раз или напишите нам напрямую.');
+      });
   });
 }

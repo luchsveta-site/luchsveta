@@ -235,7 +235,9 @@
         <li><span class="star">★</span> Мини-словарь значений рун Футарка</li>
       </ul>
     </div>
-    <form class="free__form reveal" id="freeForm">
+    <form class="free__form reveal" id="freeForm" name="free-materials" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="free-materials">
+      <p class="hp-field"><label>Не заполняйте это поле: <input name="bot-field"></label></p>
       <label for="freeEmail">Ваш e-mail</label>
       <input type="email" id="freeEmail" name="email" placeholder="you@mail.ru" required>
 

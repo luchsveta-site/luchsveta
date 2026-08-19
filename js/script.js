@@ -32,15 +32,26 @@ const observer = new IntersectionObserver((entries) => {
 
 revealEls.forEach(el => observer.observe(el));
 
-// Заглушка отправки формы бесплатных материалов
+// Отправка формы бесплатных материалов в Netlify Forms
 const freeForm = document.getElementById('freeForm');
 if (freeForm) {
   freeForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const btn = freeForm.querySelector('button');
     const originalText = btn.textContent;
-    btn.textContent = 'Отправлено!';
-    freeForm.reset();
-    setTimeout(() => { btn.textContent = originalText; }, 2500);
+    const data = new URLSearchParams(new FormData(freeForm)).toString();
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: data
+    })
+      .then(() => {
+        btn.textContent = 'Отправлено!';
+        freeForm.reset();
+        setTimeout(() => { btn.textContent = originalText; }, 2500);
+      })
+      .catch(() => {
+        alert('Не удалось отправить форму. Попробуйте ещё раз или напишите нам напрямую.');
+      });
   });
 }
