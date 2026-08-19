@@ -41,3 +41,37 @@ document.querySelectorAll('.faq__item').forEach(item => {
     if (!wasOpen) item.classList.add('is-open');
   });
 });
+
+// Кнопки «Оставить заявку» на карточках курсов — подставляют курс и ведут к форме
+const courseInput = document.getElementById('signupCourse');
+document.querySelectorAll('.js-request-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (courseInput) courseInput.value = btn.dataset.course || '';
+    const signup = document.getElementById('signup');
+    if (signup) signup.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// Отправка формы заявки в Netlify Forms
+const signupForm = document.getElementById('signupForm');
+if (signupForm) {
+  signupForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = signupForm.querySelector('button');
+    const originalText = btn.textContent;
+    const data = new URLSearchParams(new FormData(signupForm)).toString();
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: data
+    })
+      .then(() => {
+        btn.textContent = 'Заявка отправлена!';
+        signupForm.reset();
+        setTimeout(() => { btn.textContent = originalText; }, 2500);
+      })
+      .catch(() => {
+        alert('Не удалось отправить форму. Попробуйте ещё раз или напишите нам напрямую.');
+      });
+  });
+}

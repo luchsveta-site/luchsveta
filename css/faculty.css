@@ -1,5 +1,68 @@
 /* ===== FACULTY PAGE — TARO ===== */
 
+.hp-field { position: absolute; left: -9999px; }
+
+/* ===== SIGNUP ===== */
+.signup {
+  position: relative;
+  padding: 110px 0;
+  background: linear-gradient(160deg, var(--bg-2) 0%, var(--bg-3) 100%);
+  overflow: hidden;
+}
+.signup__decor { position: absolute; inset: 0; pointer-events: none; }
+.signup__decor .sparkle--1 { top: 12%; left: 8%; }
+.signup__decor .sparkle--2 { top: 70%; left: 20%; }
+.signup__decor .sparkle--3 { top: 25%; right: 10%; }
+.signup__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+.signup__text p { color: var(--text-muted); margin: 20px 0; }
+
+.signup__form {
+  background: rgba(201, 162, 39, 0.05);
+  border: 1px solid var(--gold-dark);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.signup__form label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: var(--gold-light);
+}
+.signup__form input {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 15px 20px;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+}
+.signup__form input:focus { outline: 2px solid var(--gold); }
+.signup__form button { margin-top: 6px; }
+
+.signup__consent { display: flex; flex-direction: column; gap: 10px; margin: 4px 0 2px; }
+.checkbox { display: flex; align-items: flex-start; gap: 10px; cursor: pointer; }
+.checkbox input[type="checkbox"] { flex: 0 0 auto; width: 18px; height: 18px; margin-top: 2px; accent-color: var(--gold); cursor: pointer; }
+.checkbox span { font-size: 12.5px; color: var(--text-muted); line-height: 1.5; }
+.checkbox a { color: var(--gold-light); text-decoration: underline; }
+.checkbox a:hover { color: var(--gold); }
+
+@media (max-width: 900px) {
+  .signup__inner { grid-template-columns: 1fr; }
+}
+
 .hero__lead {
   font-size: 17px;
   color: var(--text-muted);
