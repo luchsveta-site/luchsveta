@@ -497,7 +497,7 @@ img { max-width: 100%; display: block; }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(165deg, rgba(10,9,8,0.86) 0%, rgba(10,9,8,0.94) 55%, rgba(10,9,8,0.97) 100%);
+  background: linear-gradient(165deg, rgba(10,9,8,0.35) 0%, rgba(10,9,8,0.6) 55%, rgba(10,9,8,0.85) 100%);
   z-index: 0;
 }
 .mc__card > * { position: relative; z-index: 1; }
