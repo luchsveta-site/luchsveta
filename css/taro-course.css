@@ -90,3 +90,14 @@ body.review-open{overflow:hidden}
  .taro-course .taro-row .taro-number{font-size:20px}
  .taro-course .method-symbol{height:80px}
 }
+
+/* Keep summary ticks aligned and enrollment available at every screen size. */
+.taro-course .stack__row{display:flex;flex-direction:row;align-items:baseline;gap:16px}
+.taro-course .stack__row>span:first-child{flex:1;min-width:0}
+.taro-course .stack__row .stack__num{flex:0 0 auto;line-height:inherit;color:var(--gold-light)}
+.taro-course .header{position:fixed;top:0;background:rgba(10,9,8,.96)}
+.taro-course .header__cta{display:inline-flex;flex-shrink:0;align-items:center;justify-content:center;animation:taro-signup-glow 2.8s ease-in-out infinite}
+@keyframes taro-signup-glow{0%,100%{box-shadow:0 0 0 0 rgba(201,162,39,.12)}50%{box-shadow:0 0 18px 4px rgba(201,162,39,.5)}}
+@media(max-width:900px){.taro-course .header__inner{gap:12px}.taro-course .header__cta{margin-left:auto;padding:12px 18px}.taro-course .burger{flex-shrink:0}}
+@media(max-width:480px){.taro-course .header .logo__text{display:none}.taro-course .header__cta{font-size:11px;padding:12px 16px}.taro-course .stack__row{padding:16px 18px;gap:12px}}
+@media(prefers-reduced-motion:reduce){.taro-course .header__cta{animation:none}}
