@@ -1,0 +1,62 @@
+.taro-course section[id]{scroll-margin-top:96px}
+.taro-course .hero__title{font-size:clamp(38px,5.4vw,70px);line-height:1.06}
+.taro-course .hero__features li{display:block;position:relative;padding-left:24px}
+.taro-course .hero__features li:before{content:'✦';position:absolute;left:0;color:var(--gold-light)}
+.taro-course .hero__text{max-width:850px}
+.taro-course .hero__lead{max-width:760px}
+.taro-course .hero__note{font-size:14px}
+.reading-formula{text-align:center;padding:24px;border:1px solid var(--gold-dark);border-radius:16px;max-width:900px;margin:0 auto 30px;color:var(--gold-light);font-weight:700;line-height:2}
+.reading-formula span{padding:0 8px;color:var(--text-muted)}
+.taro-grid,.program-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.taro-grid h3,.program-topic h3{font-size:19px;line-height:1.4;margin-bottom:12px}
+.taro-grid p,.program-topic p{color:var(--text-muted);font-size:15px}
+.taro-number{display:block;color:var(--gold-light);font-size:25px;font-weight:800;margin-bottom:16px}
+.program-topic{padding:28px;border:1px solid var(--border);border-radius:18px;background:var(--bg-2)}
+.taro-note{color:var(--text-muted);font-size:14px;margin-top:24px}
+.center{text-align:center}
+.taro-course .tariff-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:stretch;text-align:left}
+.tariff-card{position:relative;min-width:0;display:flex;flex-direction:column;padding:32px 25px;border:1px solid var(--border);border-radius:22px;background:var(--bg)}
+.tariff-card--featured{border:2px solid var(--gold);background:linear-gradient(145deg,#292315,var(--bg-2));box-shadow:0 0 35px #c9a22712}
+.tariff-card .eyebrow{font-size:10px;letter-spacing:1.5px;min-height:36px}
+.tariff-card h3{font-size:24px;line-height:1.25;min-height:60px}
+.tariff-price{font-size:34px;color:var(--gold-light);font-weight:800;margin-top:20px;white-space:nowrap}
+.tariff-price span{display:block;font-size:19px;font-weight:500}
+.tariff-period{font-size:12px;color:var(--text-muted);margin-bottom:24px}
+.tariff-card .check-list{margin-bottom:20px}
+.tariff-card .check-list li{font-size:14px}
+.tariff-note{font-size:13px;color:var(--text-muted);margin-top:auto;margin-bottom:20px}
+.tariff-card .btn{display:block;text-align:center;padding:15px 12px;font-size:12px}
+.access-note{max-width:800px;margin:32px auto 0;color:var(--text-muted);font-size:15px}
+.taro-course .bonus__grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.taro-course .guarantee__card p+p{margin-top:16px}
+.taro-course .guarantee__card a{overflow-wrap:anywhere;color:var(--gold-light);text-decoration:underline}
+.review-shot{padding:24px;border:1px solid var(--border);border-radius:20px;background:var(--bg-2);min-width:0}
+.review-shot h3{font-size:18px;line-height:1.45;margin-bottom:22px}
+.review-zoom{display:block;cursor:zoom-in;border-radius:10px;overflow:hidden}
+.review-zoom img{width:100%;height:auto}
+.review-shot .review__author{margin-top:16px}
+.review-shot details{font-size:13px;color:var(--text-muted);margin-top:16px}
+.review-shot summary{cursor:pointer;color:var(--gold-light)}
+.review-shot details p{margin-top:16px}
+.taro-faq{max-width:880px;margin:auto}
+.taro-faq details{padding:22px 25px;border:1px solid var(--border);border-radius:14px;margin-bottom:14px;background:var(--bg-2)}
+.taro-faq summary{cursor:pointer;font-weight:700;color:var(--text);line-height:1.5}
+.taro-faq details p{color:var(--text-muted);padding-top:18px}
+.taro-course .urgency__inner{text-align:center}
+.taro-course .signup__text a{color:var(--gold-light);text-decoration:underline}
+.signup__form select{width:100%;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:14px;padding:16px 12px;font:inherit;font-size:14px}
+.signup__form input,.signup__form select{min-width:0;max-width:100%}
+.taro-course #formStatus{font-size:14px;overflow-wrap:anywhere}
+.taro-course .btn:disabled{opacity:.6;cursor:wait}
+.taro-course :focus-visible{outline:3px solid var(--gold-light);outline-offset:5px}
+#reviewDialog{position:fixed;margin:auto;width:min(94vw,1000px);max-height:94vh;padding:60px 16px 16px;border:1px solid var(--gold);border-radius:16px;background:var(--bg);color:var(--text);overflow:auto}
+#reviewDialog::backdrop{background:rgba(0,0,0,.88)}
+#reviewFull{width:auto;max-width:100%;height:auto;margin:auto}
+.dialog-close{position:absolute;top:12px;right:16px;border:1px solid var(--gold);border-radius:30px;padding:9px 18px;background:var(--bg-2);color:var(--gold-light);cursor:pointer;font:inherit}
+body.review-open{overflow:hidden}
+.skip-link{position:fixed;top:8px;left:10px;z-index:10000;transform:translateY(-150%);padding:12px;background:var(--gold-light);color:var(--bg)}
+.skip-link:focus{transform:none}
+@media(max-width:1000px){.taro-course .nav{gap:12px}.taro-course .nav__link{font-size:11px}.tariff-card{padding:28px 18px}.tariff-card h3{font-size:20px}.tariff-price{font-size:29px}}
+@media(max-width:800px){.taro-grid,.program-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.taro-course .tariff-grid,.taro-course .bonus__grid,.taro-course .reviews__grid{grid-template-columns:1fr}.tariff-card h3,.tariff-card .eyebrow{min-height:0}.tariff-card{padding:30px}.tariff-note{margin-top:0}.taro-course .signup__inner{grid-template-columns:1fr;gap:30px}.taro-course .signup__form{padding:25px}.taro-course .hero__title{font-size:clamp(38px,8vw,60px)}}
+@media(max-width:480px){.taro-grid,.program-grid{grid-template-columns:1fr}.taro-course .hero__actions{align-items:stretch;flex-direction:column}.taro-course .hero__actions .btn{text-align:center}.taro-course .container{padding-left:20px;padding-right:20px}.taro-course .hero__lead{font-size:17px}.taro-course .hero__features li{font-size:14px}.tariff-card{padding:25px 20px}.review-shot{padding:18px}.taro-course .signup__form{padding:22px 18px}.reading-formula{font-size:14px;padding:18px}.taro-course .btn{white-space:normal}.taro-course .stack__row{gap:14px}.taro-course .stack__row span:first-child{min-width:0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.taro-course *, .taro-course *:before,.taro-course *:after{animation:none!important;transition:none!important}}
