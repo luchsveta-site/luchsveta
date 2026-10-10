@@ -1,0 +1,14 @@
+.master-course section[id]{scroll-margin-top:96px}
+.master-course section:not(.hero){padding-top:52px;padding-bottom:52px}
+.master-course .hero{padding-top:132px;padding-bottom:56px}
+.master-course .section-title{margin-bottom:24px}
+.master-course .section-subtitle{margin-bottom:28px}
+.master-course .deliver__grid{margin-top:28px}
+.master-course .stack__final{margin-top:30px}
+.master-course .header{position:fixed;top:0;background:rgba(10,9,8,.96)}
+.master-course .header__cta{display:inline-flex;flex-shrink:0;align-items:center;justify-content:center;animation:master-signup-glow 2.8s ease-in-out infinite}
+@keyframes master-signup-glow{0%,100%{box-shadow:0 0 0 0 rgba(201,162,39,.12)}50%{box-shadow:0 0 18px 4px rgba(201,162,39,.5)}}
+@media(max-width:900px){.master-course .header__inner{gap:12px}.master-course .header__cta{margin-left:auto;padding:12px 18px}.master-course .burger{flex-shrink:0}}
+@media(max-width:600px){.master-course section:not(.hero){padding-top:36px;padding-bottom:36px}.master-course .hero{padding-top:112px;padding-bottom:40px}}
+@media(max-width:480px){.master-course .header .logo__text{display:none}.master-course .header__cta{font-size:11px;padding:12px 16px}}
+@media(prefers-reduced-motion:reduce){.master-course .header__cta{animation:none}}
