@@ -45,7 +45,7 @@ document.querySelectorAll('.faq__item').forEach(item => {
 // Таймер обратного отсчёта до закрытия набора
 const countdownEl = document.getElementById('countdown');
 if (countdownEl) {
-  const deadline = new Date('2026-09-10T23:59:59');
+  const deadline = new Date('2027-01-10T23:59:59');
   const cdDays = document.getElementById('cd-days');
   const cdHours = document.getElementById('cd-hours');
   const cdMinutes = document.getElementById('cd-minutes');
@@ -72,8 +72,8 @@ if (countdownEl) {
     cdSeconds.textContent = pad(seconds);
   };
 
-  updateCountdown();
   const countdownTimer = setInterval(updateCountdown, 1000);
+  updateCountdown();
 }
 
 // Отправка формы заявки в Netlify Forms
