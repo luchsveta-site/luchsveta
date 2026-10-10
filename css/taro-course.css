@@ -7,11 +7,7 @@
 .taro-course .hero__note{font-size:14px}
 .reading-formula{text-align:center;padding:24px;border:1px solid var(--gold-dark);border-radius:16px;max-width:900px;margin:0 auto 30px;color:var(--gold-light);font-weight:700;line-height:2}
 .reading-formula span{padding:0 8px;color:var(--text-muted)}
-.taro-grid,.program-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-.taro-grid h3,.program-topic h3{font-size:19px;line-height:1.4;margin-bottom:12px}
-.taro-grid p,.program-topic p{color:var(--text-muted);font-size:15px}
 .taro-number{display:block;color:var(--gold-light);font-size:25px;font-weight:800;margin-bottom:16px}
-.program-topic{padding:28px;border:1px solid var(--border);border-radius:18px;background:var(--bg-2)}
 .taro-note{color:var(--text-muted);font-size:14px;margin-top:24px}
 .center{text-align:center}
 .taro-course .tariff-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:stretch;text-align:left}
@@ -57,6 +53,40 @@ body.review-open{overflow:hidden}
 .skip-link{position:fixed;top:8px;left:10px;z-index:10000;transform:translateY(-150%);padding:12px;background:var(--gold-light);color:var(--bg)}
 .skip-link:focus{transform:none}
 @media(max-width:1000px){.taro-course .nav{gap:12px}.taro-course .nav__link{font-size:11px}.tariff-card{padding:28px 18px}.tariff-card h3{font-size:20px}.tariff-price{font-size:29px}}
-@media(max-width:800px){.taro-grid,.program-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.taro-course .tariff-grid,.taro-course .bonus__grid,.taro-course .reviews__grid{grid-template-columns:1fr}.tariff-card h3,.tariff-card .eyebrow{min-height:0}.tariff-card{padding:30px}.tariff-note{margin-top:0}.taro-course .signup__inner{grid-template-columns:1fr;gap:30px}.taro-course .signup__form{padding:25px}.taro-course .hero__title{font-size:clamp(38px,8vw,60px)}}
-@media(max-width:480px){.taro-grid,.program-grid{grid-template-columns:1fr}.taro-course .hero__actions{align-items:stretch;flex-direction:column}.taro-course .hero__actions .btn{text-align:center}.taro-course .container{padding-left:20px;padding-right:20px}.taro-course .hero__lead{font-size:17px}.taro-course .hero__features li{font-size:14px}.tariff-card{padding:25px 20px}.review-shot{padding:18px}.taro-course .signup__form{padding:22px 18px}.reading-formula{font-size:14px;padding:18px}.taro-course .btn{white-space:normal}.taro-course .stack__row{gap:14px}.taro-course .stack__row span:first-child{min-width:0}}
+@media(max-width:800px){.taro-course .tariff-grid,.taro-course .bonus__grid,.taro-course .reviews__grid{grid-template-columns:1fr}.tariff-card h3,.tariff-card .eyebrow{min-height:0}.tariff-card{padding:30px}.tariff-note{margin-top:0}.taro-course .signup__inner{grid-template-columns:1fr;gap:30px}.taro-course .signup__form{padding:25px}.taro-course .hero__title{font-size:clamp(38px,8vw,60px)}}
+@media(max-width:480px){.taro-course .hero__actions{align-items:stretch;flex-direction:column}.taro-course .hero__actions .btn{text-align:center}.taro-course .container{padding-left:20px;padding-right:20px}.taro-course .hero__lead{font-size:17px}.taro-course .hero__features li{font-size:14px}.tariff-card{padding:25px 20px}.review-shot{padding:18px}.taro-course .signup__form{padding:22px 18px}.reading-formula{font-size:14px;padding:18px}.taro-course .btn{white-space:normal}.taro-course .stack__row{gap:14px}.taro-course .stack__row span:first-child{min-width:0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.taro-course *, .taro-course *:before,.taro-course *:after{animation:none!important;transition:none!important}}
+
+/* Compact course layout, scoped to this landing page. */
+.taro-course main>section:not(.hero){padding:52px 0}
+.taro-course .hero{padding:132px 0 56px}
+.taro-course .hero__inner--photo{width:100%;max-width:880px;min-width:0}
+.taro-course .hero__title{font-size:clamp(30px,4.3vw,60px);line-height:1.12;overflow-wrap:anywhere}
+.taro-course .section-title{margin-bottom:24px}
+.taro-course .section-subtitle{margin-bottom:28px}
+.taro-course .deliver__grid{margin-top:28px;gap:22px}
+.taro-course .pain__bye{padding:30px}
+.taro-course .pain__bye .cross-list{text-align:left;max-width:760px;margin:0 auto}
+.taro-course .pain__bye .cross-list li{text-align:left;padding-left:30px}
+.taro-course .method-symbol{height:100px;margin:0 0 18px;color:var(--gold-light)}
+.taro-course .method-symbol svg{display:block;height:100%;width:145px;max-width:100%;margin:auto}
+.taro-course .taro-rows{list-style:none;max-width:980px;padding:0;margin:24px auto 0}
+.taro-course .taro-row{display:grid;grid-template-columns:42px minmax(0,1fr);gap:16px;padding:18px 0;border-bottom:1px solid var(--border);text-align:left}
+.taro-course .taro-row:last-child{border-bottom:0}
+.taro-course .taro-row .taro-number{font-size:22px;line-height:1.4;margin:0}
+.taro-course .taro-row h3{font-size:19px;line-height:1.4;margin:0 0 6px}
+.taro-course .taro-row p{font-size:15px;color:var(--text-muted);margin:0}
+@media(max-width:900px){
+ .taro-course .hero__inner--photo{max-width:100%}
+ .taro-course .hero__title{font-size:clamp(27px,6vw,52px)}
+}
+@media(max-width:600px){
+ .taro-course main>section:not(.hero){padding:36px 0}
+ .taro-course .hero{padding:112px 0 40px}
+ .taro-course .hero__title{font-size:clamp(24px,6.2vw,37px);letter-spacing:-.5px}
+ .taro-course .pain__bye{padding:24px 18px}
+ .taro-course .taro-row{grid-template-columns:30px minmax(0,1fr);gap:10px;padding:15px 0}
+ .taro-course .taro-row h3{font-size:17px}
+ .taro-course .taro-row .taro-number{font-size:20px}
+ .taro-course .method-symbol{height:80px}
+}
